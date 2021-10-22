@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 64px;
+    /* background-color: aquamarine; */
+    margin-top: 0;
+    z-index: 99;
+    background: #32e0b8;
+    backdrop-filter: blur(40px);
+    color: white;
+    div {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+        display: flex;
+        width: 60%;
+        p {
+            margin-left: 4rem;
+        }
+    }
+}
