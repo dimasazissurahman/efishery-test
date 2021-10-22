@@ -37,8 +37,13 @@ export const Home = () => {
             const filterDataByKomoditas = komoditasValue ? filterDataBySize.filter(item => komoditasValue.includes(item.komoditas)) : filterDataBySize;
             const filterDataByPrice = priceValue ? filterDataByKomoditas.filter(item => priceValue.includes(item.price)) : filterDataByKomoditas;
             console.log(filterDataByPrice);
-            setData([...data, ...filterDataByPrice]);
-            localStorage.setItem("data", JSON.stringify([...data, ...filterDataByPrice]));
+            if(filterDataByPrice.length > 0){
+                setData([...data, ...filterDataByPrice]);
+                localStorage.setItem("data", JSON.stringify([...data, ...filterDataByPrice]));
+            }
+            else {
+                setData([]);
+            }
         }
         else {
             alert("Error");
